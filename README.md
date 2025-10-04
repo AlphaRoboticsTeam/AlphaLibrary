@@ -3,7 +3,7 @@
 This project is designed to make it easier to use Arduino with the *TCA module.
 
 ## Features
-### tcaselect function:
+### TCAselect function:
 -  Helps to easily use this module.
 
 ![Function code](https://github.com/AlphaRoboticsTeam/AlphaLibrary/blob/main/photo/TCA.png) 
