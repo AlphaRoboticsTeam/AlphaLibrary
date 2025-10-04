@@ -29,5 +29,3 @@ This project is designed to make it easier to use Arduino with the *TCA module.
 ![Function code](https://github.com/AlphaRoboticsTeam/AlphaLibrary/blob/main/photo/ultra.png)
 ### Color class:
 - Choose between RGB and HSV modes.
-
-![Function code](https://github.com/AlphaRoboticsTeam/Color-Detection/blob/main/detectColorFunction.png)
