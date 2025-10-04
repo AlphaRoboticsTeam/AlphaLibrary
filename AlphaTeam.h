@@ -148,9 +148,7 @@ public:
 // -------------------- Color Sensor --------------------
 enum ColorMode { RGB,
                  HSV };
-
 class AlphaColorSensor {
-
   Adafruit_TCS34725 tcs;
   uint8_t channel;
   ColorMode mode;
@@ -165,11 +163,9 @@ public:
   }
   int readColor() {
     tcaSelect(channel);
-
     uint16_t r, g, b, c;
     const int samples = 5;
     uint32_t sumR = 0, sumG = 0, sumB = 0;
-
     for (int i = 0; i < samples; i++) {
       tcs.getRawData(&r, &g, &b, &c);
       sumR += r;
@@ -185,7 +181,6 @@ public:
       if (total == 0) return 0;
       float ratioR = avgR / total;
       float ratioB = avgB / total;
-
       if (ratioB > 0.4) return 2;       // BLUE
       else if (ratioR > 0.4) return 5;  // RED
       else return 0;
@@ -197,13 +192,11 @@ public:
       V = maxV;
       float delta = maxV - minV;
       S = (maxV == 0) ? 0 : delta / maxV;
-
       if (delta == 0) H = 0;
       else if (maxV == R) H = 60.0 * fmod(((G - B) / delta), 6.0);
       else if (maxV == G) H = 60.0 * (((B - R) / delta) + 2);
       else H = 60.0 * (((R - G) / delta) + 4);
       if (H < 0) H += 360;
-
       if (H >= 200 && H <= 350) return 2;    // BLUE
       else if (H >= 3 && H <= 15) return 5;  // RED
       else return 0;
@@ -212,3 +205,4 @@ public:
   }
 };
 #endif
+
