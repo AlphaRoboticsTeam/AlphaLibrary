@@ -27,5 +27,3 @@ This project is designed to make it easier to use Arduino with the *TCA module.
 - Only requires two pins, trigger and echo.
 
 ![Function code](https://github.com/AlphaRoboticsTeam/AlphaLibrary/blob/main/photo/ultra.png)
-### Color class:
-- Choose between RGB and HSV modes.
